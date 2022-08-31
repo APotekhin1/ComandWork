@@ -46,7 +46,10 @@ public class Main {
                 continue;
             }
             try {
-                product[productNumber].sum += product[productNumber].price * productCount;
+                if (productCount == 0) {
+                    product[productNumber].sum = 0;
+                } else product[productNumber].sum +=
+                        product[productNumber].price * productCount;
                 product[productNumber].productName = product[productNumber].productName;
             } catch (ArrayIndexOutOfBoundsException c) {
             }
